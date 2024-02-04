@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Title</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='cupcake.css') }}"
+    />
+  </head>
+  <body>
+    <div class="directory">
+      <a href="{{ url_for('all_cupcakes')}}">cupcakes</a>
+      <a href="{{ url_for('home')}}">home</a>
+      <a href="{{ url_for('order')}}">order</a>
+    </div>
+    <section class="cupcakes">
+      <div class="box">
+        <h3>{{ cupcake['name'] }}</h3>
+        <h4>Flavor: {{ cupcake['flavor'] }}</h4>
+        <h4>Frosting: {{ cupcake['frosting'] }}</h4>
+        <h4><b>Price: {{ cupcake['price'] }}</b></h4>
+      </div>
+    </section>
+  </body>
+</html>
